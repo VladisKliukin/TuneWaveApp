@@ -42,7 +42,8 @@ public class AlbumController {
     }
 
     //--------------------------------------------------------------------------------------------------------------
-    @DeleteMapping("/{id}")
+    @DeleteMapping(
+            "/{id}")
     public ResponseEntity<?> removeAlbum(@PathVariable String id) {
         try {
             Boolean removed = albumService.removeAlbum(id);
