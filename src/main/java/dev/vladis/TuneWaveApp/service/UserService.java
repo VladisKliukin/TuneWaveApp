@@ -34,4 +34,10 @@ public class UserService {
                 .role(UserResponse.Role.USER)
                 .build();
     }
+
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
 }
